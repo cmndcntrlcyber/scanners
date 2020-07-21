@@ -1,3 +1,5 @@
+#!/bin/bash/
+
 mkdir /home/d43d3lu5/git
 cd /home/d43d3lu5/git
 
