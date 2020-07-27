@@ -87,7 +87,7 @@ xsltproc web.xmpp.info.$name.xml -o web.xmpp.info.$name.html
 rm web.xmpp.info.$name.xml
 
 nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script jdwp-inject -oX web.jdwp.inject.$name.xml
-xsltproc vuln-init.$name.xml -o vuln-init.$name.html
+xsltproc vjdwp.inject.$name.xml -o jdwp.inject.$name.html
 rm web.jdwp.inject.$name.xml
 
 nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script 'jdwp-exec' -oX web.jdwp.exec.$name.xml
