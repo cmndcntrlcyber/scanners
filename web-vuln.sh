@@ -26,34 +26,34 @@ nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-srv-enum  --script-args 
 xsltproc web.dns.srv.enum.$name.xml -o web.dns.srv.enum.$name.html
 rm web.dns.srv.enum.$name.xml
 
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script exploit --script-args "exploit.intensive" -oX web.exploit.$name.xml
-xsltproc web.exploit.$name.xml -o web.exploit.$name.html
-rm web.exploit.$name.xml
-
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script http-enum --script-args "http-enum.category" -oX web.http.enum.$name.xml
-xsltproc web.http.enum.$name.xml -o web.http.enum.$name.html
-rm web.http.enum.$name.xml
-
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script ssh-publickey-acceptance -oX web.ssh.publickey.$name.xml
-xsltproc web.ssh.publickey.$name.xml -o web.ssh.publickey.$name.html
-rm web.ssh.publickey.$name.xml
-
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-client-subnet-scan -oX web.dns.subnet.$name.xml
-xsltproc web.dns.subnet.$name.xml -o web.dns.subnet.$name.html
-rm web.dns.subnet.$name.xml
-
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-service-discovery -oX web.dns.service.$name.xml
-xsltproc web.dns.service.$name.xml -o web.dns.service.$name.html
-rm web.dns.service.$name.xml
-
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-zone-transfer -oX web.dns.zone.$name.xml
-xsltproc web.dns.zone.$name.xml -o web.dns.zone.$name.html
-rm web.dns.zone.$name.xml
-
-nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script hostmap-crtsh -oX web.hostmap.crtsh.$name.xml
-xsltproc web.hostmap.crtsh.$name.xml -o web.hostmap.crtsh.$name.html
-rm web.hostmap.crtsh.$name.xml
-
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script exploit --script-args "exploit.intensive" -oX web.exploit.$name.xml                                                                                                             
+xsltproc web.exploit.$name.xml -o web.exploit.$name.html                                                          
+rm web.exploit.$name.xml                                                                                          
+                                                                                                                  
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script http-enum --script-args "http-enum.category" -oX web.http.enum.$name.xml                                                                                                        
+xsltproc web.http.enum.$name.xml -o web.http.enum.$name.html                                                      
+rm web.http.enum.$name.xml                                                                                        
+                                                                                                                  
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script ssh-publickey-acceptance -oX web.ssh.publickey.$name.xml      
+xsltproc web.ssh.publickey.$name.xml -o web.ssh.publickey.$name.html                                              
+rm web.ssh.publickey.$name.xml                                                                                    
+                                                                                                                  
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-client-subnet-scan -oX web.dns.subnet.$name.xml           
+xsltproc web.dns.subnet.$name.xml -o web.dns.subnet.$name.html                                                    
+rm web.dns.subnet.$name.xml                                                                                       
+                                                                                                                  
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-service-discovery -oX web.dns.service.$name.xml           
+xsltproc web.dns.service.$name.xml -o web.dns.service.$name.html                                                  
+rm web.dns.service.$name.xml                                                                                      
+                                                                                                                  
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script dns-zone-transfer -oX web.dns.zone.$name.xml      
+xsltproc web.dns.zone.$name.xml -o web.dns.zone.$name.html                                                        
+rm web.dns.zone.$name.xml                                                                                         
+                                                                                                                  
+nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script hostmap-crtsh -oX web.hostmap.crtsh.$name.xml     
+xsltproc web.hostmap.crtsh.$name.xml -o web.hostmap.crtsh.$name.html                                              
+rm web.hostmap.crtsh.$name.xml                                                                                    
+                                                                                                                  
 nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script http-auth-finder -oX web.http.auth.$name.xml
 xsltproc web.http.auth.$name.xml -o web.http.auth.$name.html
 rm web.http.auth.$name.xml
@@ -87,7 +87,7 @@ xsltproc web.xmpp.info.$name.xml -o web.xmpp.info.$name.html
 rm web.xmpp.info.$name.xml
 
 nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script jdwp-inject -oX web.jdwp.inject.$name.xml
-xsltproc vjdwp.inject.$name.xml -o jdwp.inject.$name.html
+xsltproc vuln-init.$name.xml -o vuln-init.$name.html
 rm web.jdwp.inject.$name.xml
 
 nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script 'jdwp-exec' -oX web.jdwp.exec.$name.xml
@@ -126,9 +126,9 @@ nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script http-frontpage-login -oX web
 xsltproc web.http.frontpage$name.xml -o web.http.frontpage.$name.html
 rm web.http.frontpage.$name.xml
 
-
 nmap $target $ports -f -T1 -v5 -Pn -sV -sC --script http-dombased-xss -oX web.dom.xss.$name.xml
 xsltproc web.dom.xss.$name.xml -o web.dom.xss.$name.html
 rm web.dom.xss.$name.xml
 
 echo "Done!"
+
