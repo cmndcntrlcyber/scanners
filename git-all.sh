@@ -16,7 +16,6 @@ git clone https://github.com/danielmiessler/SecLists.git
 git clone https://github.com/cmndcntrlcyber/scanners.git
 git clone https://github.com/cmndcntrlcyber/payloads.git
 git clone https://github.com/cmndcntrlcyber/py.git
-git clone https://github.com/cmndcntrlcyber/commands
 
 
 mv IntruderPayloads INTpay
