@@ -22,11 +22,11 @@ mv IntruderPayloads INTpay
 mv PayloadsAllTheThings PATT
 mv SecLists seclists
 
-mv scanners /home/d43d3lu5/scripts
-mv paylaods /home/d43d3lu5/scripts
-mv py /home/d43d3lu5/scripts
-mv commands /home/d43d3lu5
-mv fuzzdb /usr/share/wordlists
-mv INTpay /usr/share/wordlists
-mv PATT /usr/share/wordlists
+mv scanners /home/$user/scripts
+mv paylaods /home/$user/scripts
+mv py /home/$user/scripts
+mv commands /home/$user
+mv fuzzdb /usr/$user/wordlists
+mv INTpay /usr/$user/wordlists
+mv PATT /usr/$user/wordlists
 mv seclists /usr/share/wordlists
