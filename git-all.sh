@@ -15,18 +15,27 @@ git clone https://github.com/OlivierLaflamme/Cheatsheet-God.git
 git clone https://github.com/danielmiessler/SecLists.git
 git clone https://github.com/cmndcntrlcyber/scanners.git
 git clone https://github.com/cmndcntrlcyber/payloads.git
-git clone https://github.com/cmndcntrlcyber/py.git
-git clone https://github.com/cmndcntrlcyber/commands.git
+git clone https://github.com/almandin/fuxploider.git
+git clone https://github.com/EmpireProject/Empire.git
+git clone https://github.com/BloodHoundAD/BloodHound.git
+git clone https://github.com/SecureAuthCorp/impacket.git
+git clone https://github.com/samratashok/nishang.git
+git clone https://github.com/Tib3rius/AutoRecon.git
 
-mv IntruderPayloads INTpay
-mv PayloadsAllTheThings PATT
+mv IntruderPayloads intpay
+mv PayloadsAllTheThings patt
 mv SecLists seclists
 
-mv scanners /home/$user/scripts
-mv paylaods /home/$user/scripts
-mv py /home/$user/scripts
-mv commands /home/$user
-mv fuzzdb /usr/$user/wordlists
-mv INTpay /usr/$user/wordlists
-mv PATT /usr/$user/wordlists
-mv seclists /usr/share/wordlists
+mv scanners /home/$user/files/recon/
+mv paylaods /home/$user/files/
+mv fuzzdb /home/$user/files/recon/wordlists
+mv intpay /home/$user/files/recon/wordlists
+mv patt /home/$user/files/recon/wordlists
+mv seclists /home/$user/files/recon/wordlists
+mv fuxploider /home/$user/files/recon
+mv Empire /home/$user/files/post/win
+mv BloodHound /home/$user/files/post/win
+mv impacket /home/$user/files/payloads
+mv nishang /home/$user/files/payloads/win
+mv AutoRecon /home/$usr/files/recon
+
