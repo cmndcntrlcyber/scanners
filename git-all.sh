@@ -37,5 +37,5 @@ mv Empire /home/$user/files/post/win
 mv BloodHound /home/$user/files/post/win
 mv impacket /home/$user/files/payloads
 mv nishang /home/$user/files/payloads/win
-mv AutoRecon /home/$usr/files/recon
+mv AutoRecon /home/$user/files/recon
 
