@@ -1,15 +1,19 @@
 #!\bin\bash
+echo "What type of target is this?"
+        read type
 echo "What's the IP range of your target?"
         read target
 echo "Which ports?"
         read ports
 echo "What's the name of your target?"
         read name
-echo "The target is" $target "and the ports are:" $ports  "and the target/file name will be:" $name
+echo "The target is" $target "and the ports are:" $ports  "and the target/file name will be: /home/d43d3lu5/recon/$type/$name"
 
-sudo mkdir /home/d43d3lu5/rslts/$name
-sudo mkdir /home/d43d3lu5/rslts/$name/vuln
-cd /home/d43d3lu5/rslts/$name/vuln
+sudo mkdir /home/d43d3lu5/files/targets/$type
+sudo mkdir /home/d43d3lu5/files/targets/$type/$name
+cp -r /home/d43d3lu5/engaged /home/d43d3lu5/files/targets/$type/$name
+mkdir /home/d43d3lu5/files/targets/$type/$name/engaged/recon/vuln
+cd /home/d43d3lu5/files/targets/$type/$name/engaged/recon/vuln
 
 sudo nmap $target $ports -f -T5 -v5 -Pn -sV -sC -O --script smb-brute.nse -oX vuln.smb-brute.$name.xml
 xsltproc vuln.smb-brute.$name.xml -o vuln.smb-brute.$name.html
